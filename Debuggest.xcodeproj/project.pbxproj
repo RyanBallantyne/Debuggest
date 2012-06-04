@@ -17,6 +17,9 @@
 		843A494B157D3A9100FEA0C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A492B157D3A9100FEA0C7 /* Cocoa.framework */; };
 		843A4953157D3A9100FEA0C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A4951157D3A9100FEA0C7 /* InfoPlist.strings */; };
 		843A4956157D3A9100FEA0C7 /* DebuggestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4955157D3A9100FEA0C7 /* DebuggestTests.m */; };
+		843A4961157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4960157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m */; };
+		843A4964157D48E500FEA0C7 /* ITVV8DebuggerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */; };
+		843A4968157D4C2E00FEA0C7 /* ITVAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4967157D4C2E00FEA0C7 /* ITVAppController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +38,26 @@
 		843A492E157D3A9100FEA0C7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		843A492F157D3A9100FEA0C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		843A4930157D3A9100FEA0C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		843A4933157D3A9100FEA0C7 /* Debuggest-Info.plist */ = {isa = PBXFileReference; path = "Debuggest-Info.plist"; sourceTree = "<group>"; };
+		843A4933157D3A9100FEA0C7 /* Debuggest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Debuggest-Info.plist"; sourceTree = "<group>"; };
 		843A4935157D3A9100FEA0C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		843A4937157D3A9100FEA0C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		843A4939157D3A9100FEA0C7 /* Debuggest-Prefix.pch */ = {isa = PBXFileReference; path = "Debuggest-Prefix.pch"; sourceTree = "<group>"; };
+		843A4939157D3A9100FEA0C7 /* Debuggest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Debuggest-Prefix.pch"; sourceTree = "<group>"; };
 		843A493B157D3A9100FEA0C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		843A493D157D3A9100FEA0C7 /* ITVAppDelegate.h */ = {isa = PBXFileReference; path = ITVAppDelegate.h; sourceTree = "<group>"; };
+		843A493D157D3A9100FEA0C7 /* ITVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITVAppDelegate.h; sourceTree = "<group>"; };
 		843A493E157D3A9100FEA0C7 /* ITVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITVAppDelegate.m; sourceTree = "<group>"; };
 		843A4941157D3A9100FEA0C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		843A4948157D3A9100FEA0C7 /* DebuggestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebuggestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843A4949157D3A9100FEA0C7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		843A4950157D3A9100FEA0C7 /* DebuggestTests-Info.plist */ = {isa = PBXFileReference; path = "DebuggestTests-Info.plist"; sourceTree = "<group>"; };
+		843A4950157D3A9100FEA0C7 /* DebuggestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DebuggestTests-Info.plist"; sourceTree = "<group>"; };
 		843A4952157D3A9100FEA0C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		843A4954157D3A9100FEA0C7 /* DebuggestTests.h */ = {isa = PBXFileReference; path = DebuggestTests.h; sourceTree = "<group>"; };
+		843A4954157D3A9100FEA0C7 /* DebuggestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebuggestTests.h; sourceTree = "<group>"; };
 		843A4955157D3A9100FEA0C7 /* DebuggestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggestTests.m; sourceTree = "<group>"; };
+		843A495F157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVV8DebuggerComunicator.h; sourceTree = "<group>"; };
+		843A4960157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVV8DebuggerComunicator.m; sourceTree = "<group>"; };
+		843A4962157D48E500FEA0C7 /* ITVV8DebuggerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVV8DebuggerData.h; sourceTree = "<group>"; };
+		843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVV8DebuggerData.m; sourceTree = "<group>"; };
+		843A4966157D4C2E00FEA0C7 /* ITVAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVAppController.h; sourceTree = "<group>"; };
+		843A4967157D4C2E00FEA0C7 /* ITVAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVAppController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +125,11 @@
 			children = (
 				843A493D157D3A9100FEA0C7 /* ITVAppDelegate.h */,
 				843A493E157D3A9100FEA0C7 /* ITVAppDelegate.m */,
+				843A4966157D4C2E00FEA0C7 /* ITVAppController.h */,
+				843A4967157D4C2E00FEA0C7 /* ITVAppController.m */,
 				843A4940157D3A9100FEA0C7 /* MainMenu.xib */,
 				843A4932157D3A9100FEA0C7 /* Supporting Files */,
+				843A4965157D48F700FEA0C7 /* V8 Interface */,
 			);
 			path = Debuggest;
 			sourceTree = "<group>";
@@ -151,6 +163,17 @@
 				843A4951157D3A9100FEA0C7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		843A4965157D48F700FEA0C7 /* V8 Interface */ = {
+			isa = PBXGroup;
+			children = (
+				843A495F157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.h */,
+				843A4960157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m */,
+				843A4962157D48E500FEA0C7 /* ITVV8DebuggerData.h */,
+				843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */,
+			);
+			name = "V8 Interface";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +286,9 @@
 			files = (
 				843A4938157D3A9100FEA0C7 /* main.m in Sources */,
 				843A493F157D3A9100FEA0C7 /* ITVAppDelegate.m in Sources */,
+				843A4961157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m in Sources */,
+				843A4964157D48E500FEA0C7 /* ITVV8DebuggerData.m in Sources */,
+				843A4968157D4C2E00FEA0C7 /* ITVAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
