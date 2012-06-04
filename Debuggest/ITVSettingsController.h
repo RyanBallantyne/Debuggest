@@ -1,5 +1,5 @@
 //
-//  ITVAppController.h
+//  ITVSettingsController.h
 //  Debuggest
 //
 //  Created by Admin on 6/4/12.
@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ITVAppController : NSObject
+@interface ITVSettingsController : NSObject
+
+- (IBAction)chooseRunFile:(id)sender;
+- (IBAction)runOrStop:(id)sender;
 
 @end
