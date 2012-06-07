@@ -10,6 +10,11 @@
 
 @interface ITVSettingsController : NSObject
 
+@property (weak) IBOutlet NSButton *runStopButt;
+@property (unsafe_unretained) IBOutlet NSWindow *debuggerWindow;
+
+@property(nonatomic, assign) BOOL isRunning;
+
 - (IBAction)chooseRunFile:(id)sender;
 - (IBAction)runOrStop:(id)sender;
 
