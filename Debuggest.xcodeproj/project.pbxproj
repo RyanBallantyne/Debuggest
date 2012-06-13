@@ -20,6 +20,7 @@
 		843A4961157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4960157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m */; };
 		843A4964157D48E500FEA0C7 /* ITVV8DebuggerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */; };
 		843A4970157D708C00FEA0C7 /* ITVSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A496F157D708C00FEA0C7 /* ITVSettingsController.m */; };
+		84ED6531158902920016A3A0 /* ITVViewJugglingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED6530158902920016A3A0 /* ITVViewJugglingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVV8DebuggerData.m; sourceTree = "<group>"; };
 		843A496E157D708C00FEA0C7 /* ITVSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVSettingsController.h; sourceTree = "<group>"; };
 		843A496F157D708C00FEA0C7 /* ITVSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVSettingsController.m; sourceTree = "<group>"; };
+		84ED652F158902920016A3A0 /* ITVViewJugglingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITVViewJugglingController.h; path = ../ITVViewJugglingController.h; sourceTree = "<group>"; };
+		84ED6530158902920016A3A0 /* ITVViewJugglingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITVViewJugglingController.m; path = ../ITVViewJugglingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				843A493E157D3A9100FEA0C7 /* ITVAppDelegate.m */,
 				843A496E157D708C00FEA0C7 /* ITVSettingsController.h */,
 				843A496F157D708C00FEA0C7 /* ITVSettingsController.m */,
+				84ED652F158902920016A3A0 /* ITVViewJugglingController.h */,
+				84ED6530158902920016A3A0 /* ITVViewJugglingController.m */,
 				843A4940157D3A9100FEA0C7 /* MainMenu.xib */,
 				843A4965157D48F700FEA0C7 /* V8 Interface */,
 			);
@@ -290,6 +295,7 @@
 				843A4961157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m in Sources */,
 				843A4964157D48E500FEA0C7 /* ITVV8DebuggerData.m in Sources */,
 				843A4970157D708C00FEA0C7 /* ITVSettingsController.m in Sources */,
+				84ED6531158902920016A3A0 /* ITVViewJugglingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
