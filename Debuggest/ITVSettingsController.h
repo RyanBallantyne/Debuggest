@@ -10,6 +10,7 @@
 
 @interface ITVSettingsController : NSObject
 
+@property (weak) IBOutlet NSTextField *shellCommandField;
 @property (weak) IBOutlet NSButton *runStopButt;
 @property (unsafe_unretained) IBOutlet NSWindow *debuggerWindow;
 
