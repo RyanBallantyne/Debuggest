@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ITVViewJugglingController : NSObject
-@property (weak) IBOutlet NSToolbarItem *settingsTab;
-@property (weak) IBOutlet NSToolbarItem *debuggerTab;
-@property (weak) IBOutlet NSTabView *tabView;
+@interface ITVViewJugglingController : NSObject <NSToolbarDelegate>
 
-- (IBAction)switchView:(NSToolbarItem *)sender;
+@property (weak) IBOutlet NSToolbarItem* settingsTab;
+@property (weak) IBOutlet NSToolbarItem* debuggerTab;
+@property (weak) IBOutlet NSTabView* tabView;
+@property (weak) IBOutlet NSToolbar* tabBar;
+
+- (IBAction)switchView:(NSToolbarItem*)sender;
 
 @end

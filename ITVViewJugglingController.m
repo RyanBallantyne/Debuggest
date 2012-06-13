@@ -12,13 +12,15 @@
 @synthesize settingsTab;
 @synthesize debuggerTab;
 @synthesize tabView;
+@synthesize tabBar;
 
 - (void)awakeFromNib
 {
-    [tabView selectTabViewItemAtIndex:0];
+    [tabBar setSelectedItemIdentifier:@"settings"];
 }
 
 - (IBAction)switchView:(NSToolbarItem *)sender {
     [tabView selectTabViewItemAtIndex:[sender tag]];
 }
+
 @end
