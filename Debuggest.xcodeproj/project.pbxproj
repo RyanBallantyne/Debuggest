@@ -20,7 +20,13 @@
 		843A4961157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4960157D3B4600FEA0C7 /* ITVV8DebuggerComunicator.m */; };
 		843A4964157D48E500FEA0C7 /* ITVV8DebuggerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */; };
 		843A4970157D708C00FEA0C7 /* ITVSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A496F157D708C00FEA0C7 /* ITVSettingsController.m */; };
+		8499BC73158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499BC72158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.m */; };
 		84ED6531158902920016A3A0 /* ITVViewJugglingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED6530158902920016A3A0 /* ITVViewJugglingController.m */; };
+		84ED6536158921790016A3A0 /* ITVShellTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED6535158921790016A3A0 /* ITVShellTaskController.m */; };
+		84ED653915892C9C0016A3A0 /* ITVShellCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED653815892C9C0016A3A0 /* ITVShellCommandParser.m */; };
+		84ED653D15892FFF0016A3A0 /* ITVShellCommandToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED653C15892FFF0016A3A0 /* ITVShellCommandToken.m */; };
+		84ED654A15893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED654915893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.m */; };
+		84ED6551158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ED6550158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +65,21 @@
 		843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVV8DebuggerData.m; sourceTree = "<group>"; };
 		843A496E157D708C00FEA0C7 /* ITVSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVSettingsController.h; sourceTree = "<group>"; };
 		843A496F157D708C00FEA0C7 /* ITVSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVSettingsController.m; sourceTree = "<group>"; };
+		8499BC71158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVTokenizerEscapeNextCharState.h; sourceTree = "<group>"; };
+		8499BC72158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVTokenizerEscapeNextCharState.m; sourceTree = "<group>"; };
 		84ED652F158902920016A3A0 /* ITVViewJugglingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITVViewJugglingController.h; path = ../ITVViewJugglingController.h; sourceTree = "<group>"; };
 		84ED6530158902920016A3A0 /* ITVViewJugglingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITVViewJugglingController.m; path = ../ITVViewJugglingController.m; sourceTree = "<group>"; };
+		84ED6534158921790016A3A0 /* ITVShellTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellTaskController.h; sourceTree = "<group>"; };
+		84ED6535158921790016A3A0 /* ITVShellTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellTaskController.m; sourceTree = "<group>"; };
+		84ED653715892C9C0016A3A0 /* ITVShellCommandParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParser.h; sourceTree = "<group>"; };
+		84ED653815892C9C0016A3A0 /* ITVShellCommandParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParser.m; sourceTree = "<group>"; };
+		84ED653B15892FFF0016A3A0 /* ITVShellCommandToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandToken.h; sourceTree = "<group>"; };
+		84ED653C15892FFF0016A3A0 /* ITVShellCommandToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandToken.m; sourceTree = "<group>"; };
+		84ED654815893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandTokenizerStateContext.h; sourceTree = "<group>"; };
+		84ED654915893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandTokenizerStateContext.m; sourceTree = "<group>"; };
+		84ED654E15893FF10016A3A0 /* ITVShellCommnadTokenizerState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITVShellCommnadTokenizerState.h; sourceTree = "<group>"; };
+		84ED654F158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVTokenizingEnvironmentOrProgramState.h; sourceTree = "<group>"; };
+		84ED6550158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVTokenizingEnvironmentOrProgramState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +148,8 @@
 			children = (
 				843A493D157D3A9100FEA0C7 /* ITVAppDelegate.h */,
 				843A493E157D3A9100FEA0C7 /* ITVAppDelegate.m */,
-				843A496E157D708C00FEA0C7 /* ITVSettingsController.h */,
-				843A496F157D708C00FEA0C7 /* ITVSettingsController.m */,
-				84ED652F158902920016A3A0 /* ITVViewJugglingController.h */,
-				84ED6530158902920016A3A0 /* ITVViewJugglingController.m */,
+				84ED65321589210D0016A3A0 /* UI Control */,
+				84ED65331589212D0016A3A0 /* Subprocess Control */,
 				843A4940157D3A9100FEA0C7 /* MainMenu.xib */,
 				843A4965157D48F700FEA0C7 /* V8 Interface */,
 			);
@@ -180,6 +197,53 @@
 				843A4963157D48E500FEA0C7 /* ITVV8DebuggerData.m */,
 			);
 			name = "V8 Interface";
+			sourceTree = "<group>";
+		};
+		84ED65321589210D0016A3A0 /* UI Control */ = {
+			isa = PBXGroup;
+			children = (
+				843A496E157D708C00FEA0C7 /* ITVSettingsController.h */,
+				843A496F157D708C00FEA0C7 /* ITVSettingsController.m */,
+				84ED652F158902920016A3A0 /* ITVViewJugglingController.h */,
+				84ED6530158902920016A3A0 /* ITVViewJugglingController.m */,
+			);
+			name = "UI Control";
+			sourceTree = "<group>";
+		};
+		84ED65331589212D0016A3A0 /* Subprocess Control */ = {
+			isa = PBXGroup;
+			children = (
+				84ED6534158921790016A3A0 /* ITVShellTaskController.h */,
+				84ED6535158921790016A3A0 /* ITVShellTaskController.m */,
+				84ED653A15892CA20016A3A0 /* Shell Command Parser */,
+			);
+			name = "Subprocess Control";
+			sourceTree = "<group>";
+		};
+		84ED653A15892CA20016A3A0 /* Shell Command Parser */ = {
+			isa = PBXGroup;
+			children = (
+				84ED653715892C9C0016A3A0 /* ITVShellCommandParser.h */,
+				84ED653815892C9C0016A3A0 /* ITVShellCommandParser.m */,
+				84ED653B15892FFF0016A3A0 /* ITVShellCommandToken.h */,
+				84ED653C15892FFF0016A3A0 /* ITVShellCommandToken.m */,
+				84ED653E158939AC0016A3A0 /* Tokenizer States */,
+			);
+			name = "Shell Command Parser";
+			sourceTree = "<group>";
+		};
+		84ED653E158939AC0016A3A0 /* Tokenizer States */ = {
+			isa = PBXGroup;
+			children = (
+				84ED654815893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.h */,
+				84ED654915893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.m */,
+				84ED654E15893FF10016A3A0 /* ITVShellCommnadTokenizerState.h */,
+				84ED654F158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.h */,
+				84ED6550158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.m */,
+				8499BC71158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.h */,
+				8499BC72158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.m */,
+			);
+			name = "Tokenizer States";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +360,12 @@
 				843A4964157D48E500FEA0C7 /* ITVV8DebuggerData.m in Sources */,
 				843A4970157D708C00FEA0C7 /* ITVSettingsController.m in Sources */,
 				84ED6531158902920016A3A0 /* ITVViewJugglingController.m in Sources */,
+				84ED6536158921790016A3A0 /* ITVShellTaskController.m in Sources */,
+				84ED653915892C9C0016A3A0 /* ITVShellCommandParser.m in Sources */,
+				84ED653D15892FFF0016A3A0 /* ITVShellCommandToken.m in Sources */,
+				84ED654A15893D5E0016A3A0 /* ITVShellCommandTokenizerStateContext.m in Sources */,
+				84ED6551158947E80016A3A0 /* ITVTokenizingEnvironmentOrProgramState.m in Sources */,
+				8499BC73158952F900A0C5CA /* ITVTokenizerEscapeNextCharState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
