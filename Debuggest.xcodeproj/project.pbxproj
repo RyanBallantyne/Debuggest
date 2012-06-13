@@ -85,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				843A4931157D3A9100FEA0C7 /* Debuggest */,
+				843A4932157D3A9100FEA0C7 /* Supporting Files */,
 				843A494E157D3A9100FEA0C7 /* DebuggestTests */,
 				843A492A157D3A9100FEA0C7 /* Frameworks */,
 				843A4928157D3A9100FEA0C7 /* Products */,
@@ -128,7 +129,6 @@
 				843A496E157D708C00FEA0C7 /* ITVSettingsController.h */,
 				843A496F157D708C00FEA0C7 /* ITVSettingsController.m */,
 				843A4940157D3A9100FEA0C7 /* MainMenu.xib */,
-				843A4932157D3A9100FEA0C7 /* Supporting Files */,
 				843A4965157D48F700FEA0C7 /* V8 Interface */,
 			);
 			path = Debuggest;
@@ -144,6 +144,7 @@
 				843A493A157D3A9100FEA0C7 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			path = Debuggest;
 			sourceTree = "<group>";
 		};
 		843A494E157D3A9100FEA0C7 /* DebuggestTests */ = {

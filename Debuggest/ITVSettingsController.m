@@ -11,7 +11,6 @@
 @interface ITVSettingsController ()
 
 @property(nonatomic, retain) NSString* runFilePath;
-@property(nonatomic, retain) NSMutableDictionary* env;
 @property(nonatomic, retain) NSString* shellCommand;
 
 @end
@@ -21,14 +20,13 @@
 @synthesize debuggerWindow;
 @synthesize isRunning;
 
-@synthesize runFilePath, env, shellCommand;
+@synthesize runFilePath, shellCommand;
 
 
 - (void)awakeFromNib
 {    
     isRunning = NO;
     runFilePath = @"";
-    env = [NSMutableDictionary dictionary];
     shellCommand = @"";
 }
 
@@ -36,6 +34,7 @@
 - (IBAction)chooseRunFile:(id)sender {
     NSOpenPanel* openPanel = [NSOpenPanel openPanel];
     [openPanel setExtensionHidden:NO];
+    
     [openPanel beginSheetModalForWindow:debuggerWindow completionHandler:^void(NSInteger result){
         NSURL* selectedFilePath = [openPanel URL];
         self.runFilePath = [selectedFilePath path];
