@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 typedef enum ITVShellCommandTokenType {
-    ITVEnvironmentVariable,
-    ITVProgramName,
-    ITVArgument,
-    ITVHomeDirectoryCharacter
+    ITVDoubleQuoteToken,
+    ITVEqualsToken,
+    ITVEscapedCharacterToken,
+    ITVSingleQuoteToken,
+    ITVStringToken,
+    ITVTildeToken,
+    ITVWhitespaceToken
 } ITVShellCommnadTokenType;
 
 @interface ITVShellCommandToken : NSObject
