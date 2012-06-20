@@ -10,4 +10,6 @@
 
 @interface ITVShellCommandParser : NSObject
 
+- (void)parseAndRunCommandString:(NSString*)command;
+
 @end

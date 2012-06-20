@@ -20,6 +20,7 @@
     __block int buffi = 0;
     
     void(^commitBuffer)(ITVShellCommnadTokenType) = ^(ITVShellCommnadTokenType triggeredByTokenType){
+        if (bufType == -1)  bufType = triggeredByTokenType;
         
         if (buffi > 0 && bufType != triggeredByTokenType)  {
             tokBuf[buffi] = '\0';
@@ -47,31 +48,31 @@
                 break;
             }
             case '=':  {
-                commitBuffer(ITVEqualsToken);
+                commitBuffer(-1);
                 
                 [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"=" type:ITVEqualsToken]];
                 break;
             }
             case '\'':  {
-                commitBuffer(ITVSingleQuoteToken);
+                commitBuffer(-1);
                 
                 [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"'" type:ITVSingleQuoteToken]];
                 break;
             }
             case '"':  {
-                commitBuffer(ITVDoubleQuoteToken);
+                commitBuffer(-1);
                 
                 [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"\"" type:ITVDoubleQuoteToken]];
                 break;
             }
             case '~':  {
-                commitBuffer(ITVTildeToken);
+                commitBuffer(-1);
                 
                 [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"~" type:ITVTildeToken]];
                 break;
             }
             case '\\':  {
-                commitBuffer(ITVEscapedCharacterToken);
+                commitBuffer(-1);
                 
                 [tokens addObject:[ITVShellCommandToken tokenWithTokenString:[NSString stringWithFormat:@"%c", str[++i]] type:ITVEscapedCharacterToken]];
                 break;

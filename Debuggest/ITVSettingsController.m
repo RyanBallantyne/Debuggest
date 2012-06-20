@@ -7,6 +7,7 @@
 //
 
 #import "ITVSettingsController.h"
+#import "ITVShellCommandParser.h"
 
 @interface ITVSettingsController ()
 
@@ -44,19 +45,17 @@
 
 - (IBAction)runOrStop:(id)sender
 {
-    // I know they're bound, but we need to make sure that
     if (!runFilePath || !shellCommand || [runFilePath isEqualToString:@""] || [shellCommand isEqualToString:@""])  {
         NSAlert* alert = [[NSAlert alloc] init];
         [alert setMessageText:@"Please pick a file to run and enter a shell command so we know how to run it."];
         [alert setAlertStyle:NSCriticalAlertStyle];
         
-//        [NSAlert alertWithMessageText: defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
         [alert beginSheetModalForWindow:debuggerWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-        
         return;
     }
     
     NSString* transformedShellCommand = [self transformedShellCommand];
+    [[[ITVShellCommandParser alloc] init] parseAndRunCommandString:transformedShellCommand];
     
     (isRunning) ? [runStopButt setTitle:@"Run"] : [runStopButt setTitle:@"Stop"];
     [self setIsRunning:!isRunning];

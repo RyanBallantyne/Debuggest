@@ -7,44 +7,14 @@
 //
 
 #import "ITVShellCommandParser.h"
+#import "ITVShellCommandTokenizer.h"
 
 @implementation ITVShellCommandParser
 
-- (NSArray*)tokenizeString:(NSString*)string
+- (void)parseAndRunCommandString:(NSString*)command
 {
-    const char* str = [string UTF8String];
-    NSMutableArray* tokens = [NSMutableArray array];
-    // By allocating a buffer big enough to hold the entire string, we know we will never overrun it
-    char* tokBuf = malloc(([string length] + 1) * sizeof(char));
-    
-    BOOL inQuotes = NO;
-    char openQuoteChar = '\0';
-    
-    for (int i = 0; str[i] != '\0'; ++i)  {
-        switch (str[i]) {
-            case ' ':
-                if (!inQuotes)  {
-                    
-                }
-                break;
-            case '"':
-            case '\'':
-                if (!inQuotes)  {
-                    openQuoteChar = str[i];
-                }
-                inQuotes = !inQuotes;
-                break;
-            case '=':
-                
-                break;
-                
-            default:
-                break;
-        }
-    }
-    
-    free(tokBuf);
-    return tokens;
+    NSArray* tokens = [[[ITVShellCommandTokenizer alloc] init] tokenizeString:command];
+    NSLog(@"%@", tokens);
 }
 
 @end

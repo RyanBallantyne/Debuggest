@@ -27,4 +27,38 @@
     return [[ITVShellCommandToken alloc] initWithTokenString:tokStr type:tokType];
 }
 
+- (NSString*)description
+{
+    NSString* typeStr;
+    switch (type) {
+        case ITVDoubleQuoteToken:
+            typeStr = @"ITVDoubleQuoteToken";
+            break;
+        case ITVEqualsToken:
+            typeStr = @"ITVEqualsToken";
+            break;
+        case ITVEscapedCharacterToken:
+            typeStr = @"ITVEscapedCharacterToken";
+            break;
+        case ITVSingleQuoteToken:
+            typeStr = @"ITVSingleQuoteToken";
+            break;
+        case ITVStringToken:
+            typeStr = @"ITVStringToken";
+            break;
+        case ITVTildeToken:
+            typeStr = @"ITVTildeToken";
+            break;
+        case ITVWhitespaceToken:
+            typeStr = @"ITVWhitespaceToken";
+            break;
+            
+        default:
+            typeStr = [NSString stringWithFormat:@"%d", type];
+            break;
+    }
+    
+    return [NSString stringWithFormat:@"%@(%@)", typeStr, token];
+}
+
 @end
