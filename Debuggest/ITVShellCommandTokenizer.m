@@ -16,42 +16,69 @@
     const char* str = [string UTF8String];
     // By allocating a buffer big enough to hold the entire string, we know we will never overrun it
     char* tokBuf = malloc(([string length] + 1) * sizeof(char));
-    int buffi = 0;
+    __block ITVShellCommnadTokenType bufType = -1;
+    __block int buffi = 0;
+    
+    void(^commitBuffer)(ITVShellCommnadTokenType) = ^(ITVShellCommnadTokenType triggeredByTokenType){
+        
+        if (buffi > 0 && bufType != triggeredByTokenType)  {
+            tokBuf[buffi] = '\0';
+            [tokens addObject:[ITVShellCommandToken tokenWithTokenString:[NSString stringWithUTF8String:tokBuf] type:bufType]];
+            
+            buffi = 0;
+            bufType = triggeredByTokenType;
+        }        
+    };
     
     for (int i = 0; str[i] != '\0'; ++i)  {
         switch (str[i])  {
             default:  {
+                commitBuffer(ITVStringToken);
                 
+                tokBuf[buffi++] = str[i];
                 break;
             }
             case ' ':
             case '\t':
             case '\n':  {
+                commitBuffer(ITVWhitespaceToken);
                 
+                tokBuf[buffi++] = str[i];
                 break;
             }
             case '=':  {
-                [tokens addObject:[[ITVShellCommandToken alloc] initWithTokenString:@"=" type:ITVEqualsToken]];
+                commitBuffer(ITVEqualsToken);
+                
+                [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"=" type:ITVEqualsToken]];
                 break;
             }
             case '\'':  {
-                [tokens addObject:[[ITVShellCommandToken alloc] initWithTokenString:@"'" type:ITVSingleQuoteToken]];
+                commitBuffer(ITVSingleQuoteToken);
+                
+                [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"'" type:ITVSingleQuoteToken]];
                 break;
             }
             case '"':  {
-                [tokens addObject:[[ITVShellCommandToken alloc] initWithTokenString:@"\"" type:ITVDoubleQuoteToken]];
+                commitBuffer(ITVDoubleQuoteToken);
+                
+                [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"\"" type:ITVDoubleQuoteToken]];
                 break;
             }
             case '~':  {
-                [tokens addObject:[[ITVShellCommandToken alloc] initWithTokenString:@"~" type:ITVTildeToken]];
+                commitBuffer(ITVTildeToken);
+                
+                [tokens addObject:[ITVShellCommandToken tokenWithTokenString:@"~" type:ITVTildeToken]];
                 break;
             }
             case '\\':  {
-                [tokens addObject:[[ITVShellCommandToken alloc] initWithTokenString:[NSString stringWithFormat:@"%c", str[++i]] type:ITVEscapedCharacterToken]];
+                commitBuffer(ITVEscapedCharacterToken);
+                
+                [tokens addObject:[ITVShellCommandToken tokenWithTokenString:[NSString stringWithFormat:@"%c", str[++i]] type:ITVEscapedCharacterToken]];
                 break;
             }
         }
     }
+    commitBuffer(-1);
     
     free(tokBuf);
     return tokens;
