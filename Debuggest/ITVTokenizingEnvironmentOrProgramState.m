@@ -7,15 +7,16 @@
 //
 
 #import "ITVTokenizingEnvironmentOrProgramState.h"
+#import "TVTokenizingEnvironmentState.h"
 
 @implementation ITVTokenizingEnvironmentOrProgramState
 
 - (id<ITVShellCommnadTokenizerState>)nextStateForChar:(char)c context:(ITVShellCommandTokenizerStateContext*)context
 {
     switch (c) {
-        case '\\':
-            <#statements#>
-            break;
+        case '=':
+            [context appendCharToBuffer:c];
+            return [[ITVTokenizingEnvironmentState alloc] init];
             
         default:
             break;

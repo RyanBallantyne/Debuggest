@@ -11,7 +11,7 @@
 @implementation ITVShellCommandTokenizerStateContext
 
 @synthesize index, tokBuffIndex, tokenBuffer, inQuotes, openQuoteChar;
-@synthesize tokens;
+@synthesize tokens, curTokenType;
 
 - (id)initWithTokenBufferSize:(int)tokBuffSize
 {
@@ -23,6 +23,7 @@
         
         tokenBuffer = malloc((tokBuffSize + 1) * sizeof(char));
         tokens = [NSMutableArray array];
+        curTokenType = ITVEnvironmentVariable;
     }
     
     return self;
@@ -63,7 +64,8 @@
 - (void)ingestCurrentToken
 {
     tokenBuffer[tokBuffIndex] = '\0';
-    [tokens addObject:[NSString stringWithUTF8String:tokenBuffer]];
+    ITVShellCommandToken* token = [ITVShellCommandToken tokenWithTokenString:[NSString stringWithUTF8String:tokenBuffer] type:curTokenType];
+    [tokens addObject:token];
     tokBuffIndex = 0;
 }
 

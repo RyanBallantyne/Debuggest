@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ITVShellCommandToken.h"
 
 @interface ITVShellCommandTokenizerStateContext : NSObject
 
@@ -16,5 +17,12 @@
 @property(nonatomic, assign) BOOL inQuotes;
 @property(nonatomic, assign) char openQuoteChar;
 @property(nonatomic, retain) NSMutableArray* tokens;
+@property(nonatomic, assign) ITVShellCommnadTokenType curTokenType;
+
+- (id)initWithTokenBufferSize:(int)tokBuffSize;
++ (ITVShellCommandTokenizerStateContext*)contextWithTokenBufferSize:(int)tokBuffSize;
+
+- (void)appendCharToBuffer:(char)c;
+
 
 @end

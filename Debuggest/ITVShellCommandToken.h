@@ -20,4 +20,7 @@ typedef enum ITVShellCommandTokenType {
 @property(nonatomic, readonly) ITVShellCommnadTokenType type;
 @property(nonatomic, readonly) NSString* token;
 
+- (id)initWithTokenString:(NSString*)tokStr type:(ITVShellCommnadTokenType)tokType;
++ (ITVShellCommandToken*)tokenWithTokenString:(NSString*)tokStr type:(ITVShellCommnadTokenType)tokType;
+
 @end
