@@ -8,6 +8,8 @@
 
 #import "ITVShellCommandParser.h"
 #import "ITVShellCommandTokenizer.h"
+#import "ITVShellCommandParserStartState.h"
+#import "ITVShellCommandParserStateContext.h"
 
 @implementation ITVShellCommandParser
 
@@ -16,9 +18,17 @@
     NSArray* tokens = [[[ITVShellCommandTokenizer alloc] init] tokenizeString:command];
     tokens = [self coalesceTokens:tokens];
     
+    ITVShellCommandParserStateBase* state = [ITVShellCommandParserStartState sharedState];
+    ITVShellCommandParserStateContext* context = [ITVShellCommandParserStateContext context];
     for (ITVShellCommandToken* token in tokens)  {
-        
+        state = [state nextStateForToken:token context:context];
     }
+    [context.arguments addObject:context.stashedToken.token];
+    
+    // Debug
+    NSLog(@"%@", context.environment);
+    NSLog(@"%@", context.launchPath);
+    NSLog(@"%@", context.arguments);
 }
 
 // We can simplify our parsing if we combine sequences of tokens that we want to treat as one single string token
@@ -27,7 +37,7 @@
     NSMutableArray* coalescedTokens = [NSMutableArray arrayWithCapacity:[tokens count]];
     NSMutableArray* tokensToCoalesce = [NSMutableArray arrayWithCapacity:10];
     BOOL inQuotes = NO;
-    enum ITVShellCommandTokenType openQuoteType = -1;
+    ITVShellCommandTokenType openQuoteType = -1;
     
     ITVShellCommandToken*(^coalesce)(NSArray*) = ^(NSArray* toCoalesce) {
         NSMutableString* tokStr = [NSMutableString string];

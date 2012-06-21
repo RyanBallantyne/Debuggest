@@ -17,6 +17,11 @@
 {
     if (self = [super init])  {
         error = nil;
+        stashedToken = nil;
+        
+        environment = [NSMutableDictionary dictionary];
+        launchPath = nil;
+        arguments = [NSMutableArray array];
     }
     
     return self;

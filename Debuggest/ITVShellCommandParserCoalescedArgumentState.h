@@ -11,5 +11,6 @@
 @interface ITVShellCommandParserCoalescedArgumentState : ITVShellCommandParserStateBase
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context;
++ (ITVShellCommandParserCoalescedArgumentState*)sharedState;
 
 @end

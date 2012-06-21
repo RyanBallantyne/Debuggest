@@ -8,11 +8,20 @@
 
 #import "ITVShellCommandParserErrorState.h"
 
+static ITVShellCommandParserErrorState* sharedState = nil;
+
 @implementation ITVShellCommandParserErrorState
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context
 {
     @throw [NSException exceptionWithName:@"ParserError" reason:@"An error was encountered during parsing the command string." userInfo:nil];
+}
+
++ (ITVShellCommandParserErrorState*)sharedState
+{
+    if (!sharedState)  sharedState = [[ITVShellCommandParserErrorState alloc] init];
+    
+    return sharedState;
 }
 
 @end

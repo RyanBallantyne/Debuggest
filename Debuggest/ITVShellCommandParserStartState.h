@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ITVShellCommandParserState.h"
 #import "ITVShellCommandParserStateBase.h"
 
 @interface ITVShellCommandParserStartState : ITVShellCommandParserStateBase
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context;
++ (ITVShellCommandParserStartState*)sharedState;
 
 @end

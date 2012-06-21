@@ -12,7 +12,7 @@
 
 @synthesize token, type;
 
-- (id)initWithTokenString:(NSString*)tokStr type:(ITVShellCommnadTokenType)tokType
+- (id)initWithTokenString:(NSString*)tokStr type:(ITVShellCommandTokenType)tokType
 {
     if (self = [super init])  {
         token = tokStr;
@@ -22,7 +22,7 @@
     return self;
 }
 
-+ (ITVShellCommandToken*)tokenWithTokenString:(NSString*)tokStr type:(ITVShellCommnadTokenType)tokType
++ (ITVShellCommandToken*)tokenWithTokenString:(NSString*)tokStr type:(ITVShellCommandTokenType)tokType
 {
     return [[ITVShellCommandToken alloc] initWithTokenString:tokStr type:tokType];
 }

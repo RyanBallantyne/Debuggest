@@ -11,5 +11,6 @@
 @interface ITVShellCommandParserEnvironmentOrProgramState : ITVShellCommandParserStateBase
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context;
++ (ITVShellCommandParserEnvironmentOrProgramState*)sharedState;
 
 @end

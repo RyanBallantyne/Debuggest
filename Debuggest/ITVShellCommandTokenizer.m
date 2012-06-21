@@ -16,10 +16,10 @@
     const char* str = [string UTF8String];
     // By allocating a buffer big enough to hold the entire string, we know we will never overrun it
     char* tokBuf = malloc(([string length] + 1) * sizeof(char));
-    __block ITVShellCommnadTokenType bufType = -1;
+    __block ITVShellCommandTokenType bufType = -1;
     __block int buffi = 0;
     
-    void(^commitBuffer)(ITVShellCommnadTokenType) = ^(ITVShellCommnadTokenType triggeredByTokenType){
+    void(^commitBuffer)(ITVShellCommandTokenType) = ^(ITVShellCommandTokenType triggeredByTokenType){
         if (bufType == -1)  bufType = triggeredByTokenType;
         
         if (buffi > 0 && bufType != triggeredByTokenType)  {

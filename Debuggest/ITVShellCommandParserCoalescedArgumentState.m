@@ -10,6 +10,8 @@
 #import "ITVShellCommandParserErrorState.h"
 #import "ITVShellCommandParserArgumentsState.h"
 
+static ITVShellCommandParserCoalescedArgumentState* sharedState = nil;
+
 @implementation ITVShellCommandParserCoalescedArgumentState
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context
@@ -21,7 +23,7 @@
         return [ITVShellCommandParserArgumentsState sharedState];
     }
     if (token.type == ITVStringToken || token.type == ITVEqualsToken)  {
-        context.stashedToken = [ITVShellCommandToken tokenWithTokenString:[NSString stringWithFormat:@"%@=", context.stashedToken.token] type:ITVStringToken];
+        context.stashedToken = [ITVShellCommandToken tokenWithTokenString:[NSString stringWithFormat:@"%@%@", context.stashedToken.token, token.token] type:ITVStringToken];
         
         return self;
     }
@@ -32,6 +34,13 @@
         [context setError:error];
         return [ITVShellCommandParserErrorState sharedState];
     }
+}
+
++ (ITVShellCommandParserCoalescedArgumentState*)sharedState
+{
+    if (!sharedState)  sharedState = [[ITVShellCommandParserCoalescedArgumentState alloc] init];
+    
+    return sharedState;
 }
 
 @end

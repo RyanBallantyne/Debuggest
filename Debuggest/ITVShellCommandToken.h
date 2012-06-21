@@ -16,14 +16,14 @@ typedef enum ITVShellCommandTokenType {
     ITVStringToken,
     ITVTildeToken,
     ITVWhitespaceToken
-} ITVShellCommnadTokenType;
+} ITVShellCommandTokenType;
 
 @interface ITVShellCommandToken : NSObject
 
-@property(nonatomic, readonly) ITVShellCommnadTokenType type;
+@property(nonatomic, readonly) ITVShellCommandTokenType type;
 @property(nonatomic, readonly) NSString* token;
 
-- (id)initWithTokenString:(NSString*)tokStr type:(ITVShellCommnadTokenType)tokType;
-+ (ITVShellCommandToken*)tokenWithTokenString:(NSString*)tokStr type:(ITVShellCommnadTokenType)tokType;
+- (id)initWithTokenString:(NSString*)tokStr type:(ITVShellCommandTokenType)tokType;
++ (ITVShellCommandToken*)tokenWithTokenString:(NSString*)tokStr type:(ITVShellCommandTokenType)tokType;
 
 @end

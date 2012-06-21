@@ -11,5 +11,6 @@
 @interface ITVShellCommandParserErrorState : ITVShellCommandParserStateBase
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context;
++ (ITVShellCommandParserErrorState*)sharedState;
 
 @end

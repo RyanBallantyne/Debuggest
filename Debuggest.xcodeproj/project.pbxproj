@@ -16,6 +16,7 @@
 		841DD1751592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD1741592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m */; };
 		841DD1781592B2400036C8BC /* ITVShellCommandParserArgumentsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD1771592B2400036C8BC /* ITVShellCommandParserArgumentsState.m */; };
 		841DD17B1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD17A1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m */; };
+		841DD17C1592BC900036C8BC /* ITVShellCommandParserStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD163159294EF0036C8BC /* ITVShellCommandParserStateContext.m */; };
 		843A492C157D3A9100FEA0C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A492B157D3A9100FEA0C7 /* Cocoa.framework */; };
 		843A4936157D3A9100FEA0C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A4934157D3A9100FEA0C7 /* InfoPlist.strings */; };
 		843A4938157D3A9100FEA0C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4937157D3A9100FEA0C7 /* main.m */; };
@@ -50,7 +51,6 @@
 		841DD16015924B5E0036C8BC /* ITVShellCommandTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandTokenizer.m; sourceTree = "<group>"; };
 		841DD162159294EF0036C8BC /* ITVShellCommandParserStateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserStateContext.h; sourceTree = "<group>"; };
 		841DD163159294EF0036C8BC /* ITVShellCommandParserStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserStateContext.m; sourceTree = "<group>"; };
-		841DD164159294EF0036C8BC /* ITVShellCommandParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserState.h; sourceTree = "<group>"; };
 		841DD167159295FF0036C8BC /* ITVShellCommandParserStartState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserStartState.h; sourceTree = "<group>"; };
 		841DD168159295FF0036C8BC /* ITVShellCommandParserStartState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserStartState.m; sourceTree = "<group>"; };
 		841DD16A1592A2E80036C8BC /* ITVShellCommandParserStateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserStateBase.h; sourceTree = "<group>"; };
@@ -126,7 +126,6 @@
 			children = (
 				841DD162159294EF0036C8BC /* ITVShellCommandParserStateContext.h */,
 				841DD163159294EF0036C8BC /* ITVShellCommandParserStateContext.m */,
-				841DD164159294EF0036C8BC /* ITVShellCommandParserState.h */,
 				841DD16A1592A2E80036C8BC /* ITVShellCommandParserStateBase.h */,
 				841DD16B1592A2E80036C8BC /* ITVShellCommandParserStateBase.m */,
 				841DD167159295FF0036C8BC /* ITVShellCommandParserStartState.h */,
@@ -265,9 +264,9 @@
 		84ED653A15892CA20016A3A0 /* Shell Command Parser */ = {
 			isa = PBXGroup;
 			children = (
-				841DD166159294FE0036C8BC /* Parser States */,
 				84ED653715892C9C0016A3A0 /* ITVShellCommandParser.h */,
 				84ED653815892C9C0016A3A0 /* ITVShellCommandParser.m */,
+				841DD166159294FE0036C8BC /* Parser States */,
 				84ED653B15892FFF0016A3A0 /* ITVShellCommandToken.h */,
 				84ED653C15892FFF0016A3A0 /* ITVShellCommandToken.m */,
 				841DD15F15924B5E0036C8BC /* ITVShellCommandTokenizer.h */,
@@ -394,6 +393,7 @@
 				84ED653915892C9C0016A3A0 /* ITVShellCommandParser.m in Sources */,
 				84ED653D15892FFF0016A3A0 /* ITVShellCommandToken.m in Sources */,
 				841DD16115924B5E0036C8BC /* ITVShellCommandTokenizer.m in Sources */,
+				841DD17C1592BC900036C8BC /* ITVShellCommandParserStateContext.m in Sources */,
 				841DD169159295FF0036C8BC /* ITVShellCommandParserStartState.m in Sources */,
 				841DD16C1592A2E80036C8BC /* ITVShellCommandParserStateBase.m in Sources */,
 				841DD16F1592A7CB0036C8BC /* ITVShellCommandParserErrorState.m in Sources */,

@@ -11,6 +11,8 @@
 #import "ITVShellCommandParserErrorState.h"
 #import "ITVShellCommandParserEnvironmentOrProgramState.h"
 
+static ITVShellCommandParserStartState* sharedState = nil;
+
 @implementation ITVShellCommandParserStartState
 
 - (ITVShellCommandParserStateBase*)nextStateForToken:(ITVShellCommandToken*)token context:(ITVShellCommandParserStateContext*)context
@@ -28,6 +30,13 @@
         [context setError:error];
         return [ITVShellCommandParserErrorState sharedState];
     }
+}
+
++ (ITVShellCommandParserStartState*)sharedState
+{
+    if (!sharedState)  sharedState = [[ITVShellCommandParserStartState alloc] init];
+    
+    return sharedState;
 }
 
 @end
