@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		841DD16115924B5E0036C8BC /* ITVShellCommandTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD16015924B5E0036C8BC /* ITVShellCommandTokenizer.m */; };
+		841DD165159294EF0036C8BC /* ITVShellCommandParserStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD163159294EF0036C8BC /* ITVShellCommandParserStateContext.m */; };
+		841DD169159295FF0036C8BC /* ITVShellCommandParserStartState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD168159295FF0036C8BC /* ITVShellCommandParserStartState.m */; };
+		841DD16C1592A2E80036C8BC /* ITVShellCommandParserStateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD16B1592A2E80036C8BC /* ITVShellCommandParserStateBase.m */; };
+		841DD16F1592A7CB0036C8BC /* ITVShellCommandParserErrorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD16E1592A7CB0036C8BC /* ITVShellCommandParserErrorState.m */; };
+		841DD1721592A93C0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD1711592A93C0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.m */; };
+		841DD1751592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD1741592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m */; };
+		841DD1781592B2400036C8BC /* ITVShellCommandParserArgumentsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD1771592B2400036C8BC /* ITVShellCommandParserArgumentsState.m */; };
+		841DD17B1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD17A1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m */; };
 		843A492C157D3A9100FEA0C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A492B157D3A9100FEA0C7 /* Cocoa.framework */; };
 		843A4936157D3A9100FEA0C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A4934157D3A9100FEA0C7 /* InfoPlist.strings */; };
 		843A4938157D3A9100FEA0C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A4937157D3A9100FEA0C7 /* main.m */; };
@@ -40,6 +48,23 @@
 /* Begin PBXFileReference section */
 		841DD15F15924B5E0036C8BC /* ITVShellCommandTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandTokenizer.h; sourceTree = "<group>"; };
 		841DD16015924B5E0036C8BC /* ITVShellCommandTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandTokenizer.m; sourceTree = "<group>"; };
+		841DD162159294EF0036C8BC /* ITVShellCommandParserStateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserStateContext.h; sourceTree = "<group>"; };
+		841DD163159294EF0036C8BC /* ITVShellCommandParserStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserStateContext.m; sourceTree = "<group>"; };
+		841DD164159294EF0036C8BC /* ITVShellCommandParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserState.h; sourceTree = "<group>"; };
+		841DD167159295FF0036C8BC /* ITVShellCommandParserStartState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserStartState.h; sourceTree = "<group>"; };
+		841DD168159295FF0036C8BC /* ITVShellCommandParserStartState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserStartState.m; sourceTree = "<group>"; };
+		841DD16A1592A2E80036C8BC /* ITVShellCommandParserStateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserStateBase.h; sourceTree = "<group>"; };
+		841DD16B1592A2E80036C8BC /* ITVShellCommandParserStateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserStateBase.m; sourceTree = "<group>"; };
+		841DD16D1592A7CB0036C8BC /* ITVShellCommandParserErrorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserErrorState.h; sourceTree = "<group>"; };
+		841DD16E1592A7CB0036C8BC /* ITVShellCommandParserErrorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserErrorState.m; sourceTree = "<group>"; };
+		841DD1701592A93B0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserEnvironmentOrProgramState.h; sourceTree = "<group>"; };
+		841DD1711592A93C0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserEnvironmentOrProgramState.m; sourceTree = "<group>"; };
+		841DD1731592AF5C0036C8BC /* ITVShellCommandParserEnvironmentState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserEnvironmentState.h; sourceTree = "<group>"; };
+		841DD1741592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserEnvironmentState.m; sourceTree = "<group>"; };
+		841DD1761592B23F0036C8BC /* ITVShellCommandParserArgumentsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserArgumentsState.h; sourceTree = "<group>"; };
+		841DD1771592B2400036C8BC /* ITVShellCommandParserArgumentsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserArgumentsState.m; sourceTree = "<group>"; };
+		841DD1791592B6120036C8BC /* ITVShellCommandParserCoalescedArgumentState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVShellCommandParserCoalescedArgumentState.h; sourceTree = "<group>"; };
+		841DD17A1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVShellCommandParserCoalescedArgumentState.m; sourceTree = "<group>"; };
 		843A4927157D3A9100FEA0C7 /* Debuggest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debuggest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843A492B157D3A9100FEA0C7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		843A492E157D3A9100FEA0C7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +121,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841DD166159294FE0036C8BC /* Parser States */ = {
+			isa = PBXGroup;
+			children = (
+				841DD162159294EF0036C8BC /* ITVShellCommandParserStateContext.h */,
+				841DD163159294EF0036C8BC /* ITVShellCommandParserStateContext.m */,
+				841DD164159294EF0036C8BC /* ITVShellCommandParserState.h */,
+				841DD16A1592A2E80036C8BC /* ITVShellCommandParserStateBase.h */,
+				841DD16B1592A2E80036C8BC /* ITVShellCommandParserStateBase.m */,
+				841DD167159295FF0036C8BC /* ITVShellCommandParserStartState.h */,
+				841DD168159295FF0036C8BC /* ITVShellCommandParserStartState.m */,
+				841DD1701592A93B0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.h */,
+				841DD1711592A93C0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.m */,
+				841DD1731592AF5C0036C8BC /* ITVShellCommandParserEnvironmentState.h */,
+				841DD1741592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m */,
+				841DD1761592B23F0036C8BC /* ITVShellCommandParserArgumentsState.h */,
+				841DD1771592B2400036C8BC /* ITVShellCommandParserArgumentsState.m */,
+				841DD1791592B6120036C8BC /* ITVShellCommandParserCoalescedArgumentState.h */,
+				841DD17A1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m */,
+				841DD16D1592A7CB0036C8BC /* ITVShellCommandParserErrorState.h */,
+				841DD16E1592A7CB0036C8BC /* ITVShellCommandParserErrorState.m */,
+			);
+			name = "Parser States";
+			sourceTree = "<group>";
+		};
 		843A491C157D3A9100FEA0C7 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +265,7 @@
 		84ED653A15892CA20016A3A0 /* Shell Command Parser */ = {
 			isa = PBXGroup;
 			children = (
+				841DD166159294FE0036C8BC /* Parser States */,
 				84ED653715892C9C0016A3A0 /* ITVShellCommandParser.h */,
 				84ED653815892C9C0016A3A0 /* ITVShellCommandParser.m */,
 				84ED653B15892FFF0016A3A0 /* ITVShellCommandToken.h */,
@@ -344,6 +394,13 @@
 				84ED653915892C9C0016A3A0 /* ITVShellCommandParser.m in Sources */,
 				84ED653D15892FFF0016A3A0 /* ITVShellCommandToken.m in Sources */,
 				841DD16115924B5E0036C8BC /* ITVShellCommandTokenizer.m in Sources */,
+				841DD169159295FF0036C8BC /* ITVShellCommandParserStartState.m in Sources */,
+				841DD16C1592A2E80036C8BC /* ITVShellCommandParserStateBase.m in Sources */,
+				841DD16F1592A7CB0036C8BC /* ITVShellCommandParserErrorState.m in Sources */,
+				841DD1721592A93C0036C8BC /* ITVShellCommandParserEnvironmentOrProgramState.m in Sources */,
+				841DD1751592AF5D0036C8BC /* ITVShellCommandParserEnvironmentState.m in Sources */,
+				841DD1781592B2400036C8BC /* ITVShellCommandParserArgumentsState.m in Sources */,
+				841DD17B1592B6130036C8BC /* ITVShellCommandParserCoalescedArgumentState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				843A4956157D3A9100FEA0C7 /* DebuggestTests.m in Sources */,
+				841DD165159294EF0036C8BC /* ITVShellCommandParserStateContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

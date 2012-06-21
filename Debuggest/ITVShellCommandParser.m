@@ -14,19 +14,14 @@
 - (void)parseAndRunCommandString:(NSString*)command
 {
     NSArray* tokens = [[[ITVShellCommandTokenizer alloc] init] tokenizeString:command];
-    NSLog(@"%@", tokens);  //debug
     tokens = [self coalesceTokens:tokens];
-    NSLog(@"%@", tokens);  //debug
     
-//    ITVShellCommandToken* prevToken = nil;
-//    for (ITVShellCommandToken* token in tokens)  {
-//        if (!prevToken)  prevToken = token;
-//        else  {
-//            
-//        }
-//    }
+    for (ITVShellCommandToken* token in tokens)  {
+        
+    }
 }
 
+// We can simplify our parsing if we combine sequences of tokens that we want to treat as one single string token
 - (NSArray*)coalesceTokens:(NSArray*)tokens
 {
     NSMutableArray* coalescedTokens = [NSMutableArray arrayWithCapacity:[tokens count]];
@@ -63,7 +58,6 @@
                 }
                 else  {
                     inQuotes = NO;
-//                    [tokensToCoalesce addObject:coalesce(tokensToCoalesce)];
                 }
                 break;
             }
