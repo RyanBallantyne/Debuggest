@@ -33,6 +33,7 @@ static ITVShellCommandParserEnvironmentOrProgramState* sharedState = nil;
         return [ITVShellCommandParserArgumentsState sharedState];
     }
     if (token.type == ITVEqualsToken)  {
+        // TODO: If an = comes after the program name in the argument list, this will erroneously error out
         if (context.stashedToken == nil)  {
             NSError* error = [NSError errorWithDomain:@"ITVShellCommandParser"
                                                  code:ITVInvalidTokenErrorCode
